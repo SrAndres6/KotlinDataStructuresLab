@@ -208,3 +208,19 @@ fun reto12() {
     println("=== Reto 12 ===")
     println("¿La ruta es reversible?: $reversible")
 }
+
+// 13. Reparto de Pedidos por Camión
+fun reto13() {
+    val paquetes = (1..25).toList()
+    val lotes = mutableListOf<List<Int>>()
+
+    var i = 0
+    while (i < paquetes.size) {
+        val fin = minOf(i + 10, paquetes.size)
+        lotes.add(paquetes.subList(i, fin))
+        i += 10
+    }
+
+    println("=== Reto 13 ===")
+    println(lotes)
+}
