@@ -120,3 +120,21 @@ fun reto7() {
     println("=== Reto 7 ===")
     println(despensa)
 }
+
+// 8. Cálculo de Promedio Académico
+fun reto8() {
+    val notas = listOf(
+        Pair(4.5, 0.3),
+        Pair(3.8, 0.2),
+        Pair(4.0, 0.5)
+    )
+
+    var definitiva = 0.0
+
+    for (nota in notas) {
+        definitiva += nota.first * nota.second
+    }
+
+    println("=== Reto 8 ===")
+    println("Nota final: %.2f".format(definitiva))
+}
