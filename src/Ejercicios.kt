@@ -270,3 +270,25 @@ fun reto16() {
     println("=== Reto 16 ===")
     println(sensores)
 }
+
+// 17. Mapa de Almacén (Matriz)
+fun reto17() {
+    val almacen = arrayOf(
+        intArrayOf(1, 2, 3, 4),
+        intArrayOf(5, 6, 7, 8),
+        intArrayOf(9, 10, 11, 12),
+        intArrayOf(13, 14, 15, 16)
+    )
+
+    var diagonalPrincipal = 0
+    var diagonalSecundaria = 0
+
+    for (i in almacen.indices) {
+        diagonalPrincipal += almacen[i][i]
+        diagonalSecundaria += almacen[i][almacen.size - 1 - i]
+    }
+
+    println("=== Reto 17 ===")
+    println("Diagonal principal: $diagonalPrincipal")
+    println("Diagonal secundaria: $diagonalSecundaria")
+}
