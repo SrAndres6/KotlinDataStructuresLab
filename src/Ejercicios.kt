@@ -20,3 +20,24 @@ fun reto1(){
     println("Maximo: $max")
     println("Minimo: $min")
 }
+
+// 2. Filtro de Empleados Senior
+fun reto2() {
+    val empleados = listOf(
+        Pair("Carlos", 25),
+        Pair("Ana", 35),
+        Pair("Luis", 42),
+        Pair("Marta", 28)
+    )
+
+    val senior = mutableListOf<String>()
+
+    for (empleado in empleados) {
+        if (empleado.second > 30) {
+            senior.add(empleado.first.uppercase())
+        }
+    }
+
+    println("\n=== Reto 2 ===")
+    println(senior)
+}
