@@ -487,3 +487,26 @@ fun reto26() {
     println("=== Reto 26 ===")
     println(comprimido)
 }
+
+// 27. Premios a Vendedores
+fun reto27() {
+    val ventas = mapOf(
+        "Ana" to 1200.0,
+        "Luis" to 900.0,
+        "Carlos" to 1500.0
+    )
+
+    var suma = 0.0
+    for (v in ventas.values) {
+        suma += v
+    }
+
+    val promedio = suma / ventas.size
+
+    println("=== Reto 27 ===")
+    for ((nombre, venta) in ventas) {
+        if (venta > promedio) {
+            println("$nombre recibe bono")
+        }
+    }
+}
