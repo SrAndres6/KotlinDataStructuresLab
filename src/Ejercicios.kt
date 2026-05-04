@@ -152,3 +152,21 @@ fun reto9() {
         println("El código $codigo pertenece a $pais")
     }
 }
+
+// 10. Rotación de Turnos de Trabajo
+fun reto10() {
+    val empleados = mutableListOf(
+        "Ana", "Luis", "Carlos",
+        "Marta", "Pedro", "Sofía", "Jorge"
+    )
+
+    val k = 2
+
+    repeat(k) {
+        val ultimo = empleados.removeAt(empleados.lastIndex)
+        empleados.add(0, ultimo)
+    }
+
+    println("=== Reto 10 ===")
+    println("Turnos rotados: $empleados")
+}
