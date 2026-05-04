@@ -389,3 +389,18 @@ fun reto21() {
     println("=== Reto 21 ===")
     println(primos)
 }
+
+// 22. Pila de Platos Sucios
+fun reto22() {
+    val pila = mutableListOf<String>()
+
+    pila.add("Plato 1")
+    pila.add("Plato 2")
+    pila.add("Plato 3")
+
+    val lavado = pila.removeAt(pila.lastIndex)
+
+    println("=== Reto 22 ===")
+    println("Plato lavado: $lavado")
+    println("Pila restante: $pila")
+}
