@@ -242,7 +242,6 @@ fun reto14() {
     }
 }
 
-
 // 15. Calculadora de IVA Selectiva
 fun reto15() {
     val productos = mapOf(
@@ -543,5 +542,33 @@ fun reto29() {
             }
         }
         if (encontrado) break
+    }
+}
+
+//30. Espejo de Layout de Tienda
+fun reto30() {
+    val tienda = arrayOf(
+        intArrayOf(1, 2),
+        intArrayOf(3, 4),
+        intArrayOf(5, 6)
+    )
+
+    val transpuesta = Array(2) { IntArray(3) }
+
+    for (i in tienda.indices) {
+        for (j in tienda[i].indices) {
+            transpuesta[j][i] = tienda[i][j]
+        }
+    }
+
+    println("=== Reto 30 ===")
+    println("Plano original:")
+    for (fila in tienda) {
+        println(fila.joinToString(" "))
+    }
+
+    println("Plano transpuesto:")
+    for (fila in transpuesta) {
+        println(fila.joinToString(" "))
     }
 }
