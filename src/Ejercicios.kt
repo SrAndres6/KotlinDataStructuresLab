@@ -224,3 +224,20 @@ fun reto13() {
     println("=== Reto 13 ===")
     println(lotes)
 }
+
+// 14. Identificador de Ticket Único
+fun reto14() {
+    val tickets = listOf(101, 102, 103, 101, 102)
+
+    for (ticket in tickets) {
+        var contador = 0
+        for (t in tickets) {
+            if (ticket == t) contador++
+        }
+        if (contador == 1) {
+            println("=== Reto 14 ===")
+            println("Ticket único: $ticket")
+            break
+        }
+    }
+}
