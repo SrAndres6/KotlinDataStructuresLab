@@ -241,3 +241,22 @@ fun reto14() {
         }
     }
 }
+
+
+// 15. Calculadora de IVA Selectiva
+fun reto15() {
+    val productos = mapOf(
+        "Televisor" to 1200000.0,
+        "Arroz" to 30000.0,
+        "Celular" to 800000.0
+    )
+
+    val resultado = mutableMapOf<String, Double>()
+
+    for ((nombre, precio) in productos) {
+        resultado[nombre] = if (precio > 50000) precio * 1.19 else precio
+    }
+
+    println("=== Reto 15 ===")
+    println(resultado)
+}
