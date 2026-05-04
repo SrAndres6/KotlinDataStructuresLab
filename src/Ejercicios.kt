@@ -366,3 +366,26 @@ fun reto20() {
     println("=== Reto 20 ===")
     println(resultado)
 }
+
+// 21. Días de Mantenimiento (Primos)
+fun reto21() {
+    val primos = mutableListOf<Int>()
+
+    for (num in 2..100) {
+        var esPrimo = true
+
+        for (i in 2 until num) {
+            if (num % i == 0) {
+                esPrimo = false
+                break
+            }
+        }
+
+        if (esPrimo) {
+            primos.add(num)
+        }
+    }
+
+    println("=== Reto 21 ===")
+    println(primos)
+}
