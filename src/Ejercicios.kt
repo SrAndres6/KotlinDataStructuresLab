@@ -83,3 +83,17 @@ fun reto5() {
         println(urls[i])
     }
 }
+
+// 6. Compatibilidad de Intereses
+fun reto6() {
+    val persona1 = setOf("cine", "música", "viajar", "leer")
+    val persona2 = setOf("música", "deporte", "viajar", "cocinar")
+
+    val comunes = persona1.intersect(persona2)
+    val exclusivos = persona1.subtract(persona2)
+
+    println("=== Reto 6 ===")
+    println("Intereses en común: $comunes")
+    println("Exclusivos de persona 1: $exclusivos")
+}
+
