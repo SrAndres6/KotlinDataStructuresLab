@@ -260,3 +260,13 @@ fun reto15() {
     println("=== Reto 15 ===")
     println(resultado)
 }
+
+// 16. Mantenimiento de Sensores
+fun reto16() {
+    val sensores = mutableListOf(1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+    sensores.removeAll { it % 3 == 0 }
+
+    println("=== Reto 16 ===")
+    println(sensores)
+}
