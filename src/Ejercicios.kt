@@ -67,3 +67,19 @@ fun reto4() {
     println("\n=== Reto 4 ===")
     println(conteo)
 }
+
+// 5. Historial de Navegación Reversible
+fun reto5() {
+    val urls = arrayOf(
+        "google.com",
+        "youtube.com",
+        "github.com",
+        "kotlinlang.org",
+        "openai.com"
+    )
+
+    println("\n=== Reto 5 ===")
+    for (i in urls.size - 1 downTo 0) {
+        println(urls[i])
+    }
+}
