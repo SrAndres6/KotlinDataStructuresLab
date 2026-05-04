@@ -445,3 +445,21 @@ fun reto24() {
     println("=== Reto 24 ===")
     println("¿Balanceado?: $balanceado")
 }
+
+// 25. Rendimiento de Maratón
+fun reto25() {
+    val tiempos = mutableListOf(45.2, 47.8, 46.5, 44.9, 48.1)
+
+    tiempos.remove(tiempos.minOrNull())
+    tiempos.remove(tiempos.maxOrNull())
+
+    var suma = 0.0
+    for (t in tiempos) {
+        suma += t
+    }
+
+    val promedio = suma / tiempos.size
+
+    println("=== Reto 25 ===")
+    println("Promedio real: %.2f".format(promedio))
+}
