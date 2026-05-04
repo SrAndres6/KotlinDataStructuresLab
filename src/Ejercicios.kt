@@ -192,3 +192,19 @@ fun reto11() {
     println("=== Reto 11 ===")
     println(maleta)
 }
+
+// 12. Verificador de Ruta Reversible
+fun reto12() {
+    val ruta = listOf("A", "B", "C", "B", "A")
+    var reversible = true
+
+    for (i in ruta.indices) {
+        if (ruta[i] != ruta[ruta.size - 1 - i]) {
+            reversible = false
+            break
+        }
+    }
+
+    println("=== Reto 12 ===")
+    println("¿La ruta es reversible?: $reversible")
+}
