@@ -170,3 +170,25 @@ fun reto10() {
     println("=== Reto 10 ===")
     println("Turnos rotados: $empleados")
 }
+
+// 11. Organizador de Maleta
+fun reto11() {
+    val objetos = listOf(
+        Pair("Zapatos", 2),
+        Pair("Camisa", 1),
+        Pair("Laptop", 3),
+        Pair("Libro", 2)
+    )
+
+    val maleta = mutableMapOf<Int, MutableList<String>>()
+
+    for ((objeto, peso) in objetos) {
+        if (!maleta.containsKey(peso)) {
+            maleta[peso] = mutableListOf()
+        }
+        maleta[peso]?.add(objeto)
+    }
+
+    println("=== Reto 11 ===")
+    println(maleta)
+}
