@@ -423,3 +423,25 @@ fun reto23() {
     println("=== Reto 23 ===")
     println(diferencias)
 }
+
+// 24. Organización de Contenedores
+fun reto24() {
+    val secuencia = "(()())"
+    var contador = 0
+    var balanceado = true
+
+    for (c in secuencia) {
+        if (c == '(') contador++
+        if (c == ')') contador--
+
+        if (contador < 0) {
+            balanceado = false
+            break
+        }
+    }
+
+    if (contador != 0) balanceado = false
+
+    println("=== Reto 24 ===")
+    println("¿Balanceado?: $balanceado")
+}
