@@ -55,3 +55,15 @@ fun reto3() {
     println(unicos)
 }
 
+// 4. Análisis de Carrito de Compras
+fun reto4() {
+    val productos = listOf("Pan", "Leche", "Pan", "Huevos", "Leche", "Pan")
+    val conteo = mutableMapOf<String, Int>()
+
+    for (producto in productos) {
+        conteo[producto] = (conteo[producto] ?: 0) + 1
+    }
+
+    println("\n=== Reto 4 ===")
+    println(conteo)
+}
