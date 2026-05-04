@@ -312,3 +312,24 @@ fun reto18() {
     println(fusion)
 }
 
+// 19. Ranking de Apps por Calificación
+fun reto19() {
+    val apps = mutableListOf(
+        Pair("WhatsApp", 4.5),
+        Pair("Instagram", 4.2),
+        Pair("Telegram", 4.8)
+    )
+
+    for (i in 0 until apps.size - 1) {
+        for (j in 0 until apps.size - i - 1) {
+            if (apps[j].second < apps[j + 1].second) {
+                val temp = apps[j]
+                apps[j] = apps[j + 1]
+                apps[j + 1] = temp
+            }
+        }
+    }
+
+    println("=== Reto 19 ===")
+    println(apps)
+}
