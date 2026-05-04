@@ -292,3 +292,23 @@ fun reto17() {
     println("Diagonal principal: $diagonalPrincipal")
     println("Diagonal secundaria: $diagonalSecundaria")
 }
+
+// 18. Fusión de Recetas
+fun reto18() {
+    val receta1 = mapOf("Harina" to 1.0, "Azúcar" to 0.5)
+    val receta2 = mapOf("Harina" to 0.5, "Leche" to 1.0)
+
+    val fusion = mutableMapOf<String, Double>()
+
+    for ((ingrediente, cantidad) in receta1) {
+        fusion[ingrediente] = cantidad
+    }
+
+    for ((ingrediente, cantidad) in receta2) {
+        fusion[ingrediente] = (fusion[ingrediente] ?: 0.0) + cantidad
+    }
+
+    println("=== Reto 18 ===")
+    println(fusion)
+}
+
