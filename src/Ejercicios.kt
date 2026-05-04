@@ -333,3 +333,36 @@ fun reto19() {
     println("=== Reto 19 ===")
     println(apps)
 }
+
+// 20. Unión de Agendas Ordenadas
+fun reto20() {
+    val lista1 = listOf("Ana", "Carlos", "Pedro")
+    val lista2 = listOf("Beatriz", "Daniel", "Sofía")
+
+    val resultado = mutableListOf<String>()
+    var i = 0
+    var j = 0
+
+    while (i < lista1.size && j < lista2.size) {
+        if (lista1[i] < lista2[j]) {
+            resultado.add(lista1[i])
+            i++
+        } else {
+            resultado.add(lista2[j])
+            j++
+        }
+    }
+
+    while (i < lista1.size) {
+        resultado.add(lista1[i])
+        i++
+    }
+
+    while (j < lista2.size) {
+        resultado.add(lista2[j])
+        j++
+    }
+
+    println("=== Reto 20 ===")
+    println(resultado)
+}
