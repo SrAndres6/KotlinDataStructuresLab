@@ -463,3 +463,27 @@ fun reto25() {
     println("=== Reto 25 ===")
     println("Promedio real: %.2f".format(promedio))
 }
+
+// 26. Compresión de Logs de Servidor
+fun reto26() {
+    val logs = listOf("UP", "UP", "DOWN", "DOWN", "DOWN", "UP")
+    val comprimido = mutableListOf<Pair<String, Int>>()
+
+    var actual = logs[0]
+    var contador = 1
+
+    for (i in 1 until logs.size) {
+        if (logs[i] == actual) {
+            contador++
+        } else {
+            comprimido.add(Pair(actual, contador))
+            actual = logs[i]
+            contador = 1
+        }
+    }
+
+    comprimido.add(Pair(actual, contador))
+
+    println("=== Reto 26 ===")
+    println(comprimido)
+}
