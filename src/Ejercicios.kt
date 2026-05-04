@@ -41,3 +41,17 @@ fun reto2() {
     println("\n=== Reto 2 ===")
     println(senior)
 }
+
+// 3. Limpieza de Contactos Duplicados
+fun reto3() {
+    val numeros = listOf(
+        "3001111111", "3002222222", "3001111111",
+        "3003333333", "3002222222", "3004444444"
+    )
+
+    val unicos = numeros.toSet().toList().sorted()
+
+    println("\n=== Reto 3 ===")
+    println(unicos)
+}
+
