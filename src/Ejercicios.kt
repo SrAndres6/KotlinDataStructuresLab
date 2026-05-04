@@ -526,3 +526,22 @@ fun reto28() {
     println("=== Reto 28 ===")
     println("Costo total: $costo")
 }
+
+// 29. Parejas de Viaje por Peso
+fun reto29() {
+    val pesos = listOf(10, 20, 15, 5, 25)
+    val target = 30
+    var encontrado = false
+
+    for (i in pesos.indices) {
+        for (j in i + 1 until pesos.size) {
+            if (pesos[i] + pesos[j] == target) {
+                println("=== Reto 29 ===")
+                println("Pareja encontrada: ${pesos[i]} + ${pesos[j]} = $target")
+                encontrado = true
+                break
+            }
+        }
+        if (encontrado) break
+    }
+}
